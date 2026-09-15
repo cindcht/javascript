@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Projet</title>
+</head>
+
+<body>
+  <main>
+    <h1>Choix de manga</h1>
+
+    <section>
+      <form onsubmit="afficherCarte(event);" action=''>
+        <fieldset>
+          <legend>Manga</legend>
+
+          <label for="manga">Titre</label>
+          <input type='text' name='nom' id="manga">
+
+
+          <label for="genre">Genre</label>
+          <input type='text' name='genre' id="genre">
+
+
+          <label for="nbventes">Nombre de ventes</label>
+          <input type='number' name='nbventes' id='nbventes'>
+
+        </fieldset>
+      </form>
+    </section>
+
+    <section>
+      <fieldset>
+        <legend>Photo</legend>
+
+        <label for="photo">Photo</label>
+        <input type='file' name='photo' id='photo'>
+
+
+
+      </fieldset>
+    </section>
+
+    <section>
+      <h1>Afficher</h1>
+      <p id="affichermanga"></p>
+      <p id="affichergenre"></p>
+      <p id="affichernbventes"></p>
+      <p id="afficherphoto"></p>
+    </section>
+
+    </section>
+    <section class="form-buttons">
+      <button type="submit" name="ajouter">Ajouter</button>
+      <a href="index.html" class="btn-cancel">Annuler</a>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
