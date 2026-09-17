@@ -11,7 +11,12 @@ h1 {
 
 label {
     color: blueviolet;
-    font-size: larger;
+    font-size: x-large;
+    margin-right: 10px;
+}
+
+ul {
+    list-style: none;
 }
 
 input {
@@ -28,17 +33,24 @@ button {
     margin-top: 20px;
     color: blueviolet;
     height: 40px;
-    width: 85px;
+    width: fit-content;
     font-size: Large;
 
 }
 
 
 #afficher {
-    color: whitesmoke;
+    color: blueviolet;
     font-size: larger;
     margin-top: 40px;
     text-align: center;
+    background-color: aliceblue;
+    border: 2px solid blueviolet;
+    border-radius: 70px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
 }
 
 fieldset {
@@ -55,5 +67,17 @@ fieldset {
 #btn-cancel {
     text-decoration: none;
     color: aliceblue;
+    font-size: x-large;
+}
+
+#afficherimage {
+    height: 300px;
+    width: 350px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#affichermanga,
+#affichergenre {
     font-size: x-large;
 }
