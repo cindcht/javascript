@@ -19,9 +19,9 @@ const afficher = document.querySelector('#afficher');
 function afficherCarte(event) {
     event.preventDefault();
 
-    afficher.style.display = "block";
+    afficher.style.display = "none";
 
-    let find = false
+    let find = false;
 
     for (const book of tableau) {
 
@@ -29,6 +29,8 @@ function afficherCarte(event) {
             book.titre.toLowerCase() === manga.value.toLowerCase() ||
             book.genre.toLowerCase() === genre.value.toLowerCase()
         ) {
+            afficher.style.display = "block";
+
             affichermanga.textContent = book.titre;
             affichergenre.textContent = book.genre;
             afficherimage.src = book.image;
@@ -38,8 +40,6 @@ function afficherCarte(event) {
     }
 
     if (find === false) {
-        affichermanga.textContent = "Manga introuvable";
-        affichergenre.textContent = "";
-        afficherimage.src = "";
+        alert("Manga introuvable");
     }
 }
