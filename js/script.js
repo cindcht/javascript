@@ -14,6 +14,7 @@ const affichermanga = document.querySelector('#affichermanga');
 const affichergenre = document.querySelector('#affichergenre');
 const afficherimage = document.querySelector('#afficherimage');
 const afficher = document.querySelector('#afficher');
+const messageRecherche = document.querySelector('#message');
 
 // Fonction appelée lorsque l'on clique sur "Rechercher"
 function afficherCarte(event) {
@@ -30,6 +31,7 @@ function afficherCarte(event) {
             book.genre.toLowerCase() === genre.value.toLowerCase()
         ) {
             afficher.style.display = "block";
+            message.textContent = "Nous avons un résultat concernant votre recherche 😊";
 
             affichermanga.textContent = book.titre;
             affichergenre.textContent = book.genre;
@@ -40,6 +42,6 @@ function afficherCarte(event) {
     }
 
     if (find === false) {
-        alert("Manga introuvable");
+        alert("Manga introuvable 🤐");
     }
 }
