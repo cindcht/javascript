@@ -24,6 +24,11 @@ input {
     border-color: blueviolet;
     border-radius: 40px;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input:hover {
+    background-color: rgba(155, 6, 219, 0.315);
 }
 
 button {
@@ -35,11 +40,15 @@ button {
     height: 40px;
     width: fit-content;
     font-size: Large;
-
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: rgba(155, 6, 219, 0.315);
+}
 
 #afficher {
+    display: none;
     color: blueviolet;
     font-size: larger;
     margin-top: 40px;
@@ -80,4 +89,8 @@ fieldset {
 #affichermanga,
 #affichergenre {
     font-size: x-large;
+}
+
+#message {
+    color: violet
 }
