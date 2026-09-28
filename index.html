@@ -17,30 +17,30 @@
 
     <h1>Choix de manga</h1>
 
-    <section>
+    <section id="formulaire">
 
       <form onsubmit="afficherCarte(event)">
 
         <fieldset>
 
-          <legend>Manga</legend>
+          <legend></legend>
+          <ul>
+            <li> <label for="manga">Titre</label>
+              <input type="text" placeholder="par titre?" name="manga" id="manga">
+            </li>
 
-          <label for="manga">Titre</label>
-          <input type="text" name="titre" id="manga">
+            <li> <label for="genre">Genre</label>
+              <input type="text" placeholder="Par genre" name="genre" id="genre">
+            </li>
 
-          <label for="genre">Genre</label>
-          <input type="text" name="genre" id="genre">
-
-          <label for="nbventes">Nombre de ventes</label>
-          <input type="number" name="nbventes" id="nbventes">
-
+          </ul>
         </fieldset>
 
-        <section class="form-buttons">
+        <section id="form-button">
 
-          <button type="submit">Ajouter</button>
+          <button type="submit">Rechercher</button>
 
-          <a href="index.html" class="btn-cancel">Annuler</a>
+          <a href="index.html" id="btn-cancel">Annuler</a>
 
         </section>
 
@@ -48,13 +48,13 @@
 
     </section>
 
-    <section>
+    <section id="afficher">
 
       <h1>Afficher</h1>
-
+      <p id="message"></p>
       <p id="affichermanga"></p>
       <p id="affichergenre"></p>
-      <p id="affichernbventes"></p>
+      <img id="afficherimage" src="" alt="">
 
     </section>
 

@@ -1,8 +1,8 @@
 // Tableau des mangas
 const tableau = [
-    { id: 0, titre: "Naruto", genre: "shonen", image: "images/naruto.jpg" },
-    { id: 1, titre: "One Piece", genre: "shonen", image: "images/onepiece.jpg" },
-    { id: 2, titre: "ReZero", genre: "Isekai", image: "images/rezero.webp" },
+    [0, "Naruto", "shonen", "images/naruto.jpg"],
+    [1, "One Piece", "shonen", "images/onepiece.jpg"],
+    [2, "ReZero", "Isekai", "images/rezero.webp"]
 ];
 
 // Champs du formulaire
@@ -27,15 +27,15 @@ function afficherCarte(event) {
     for (const book of tableau) {
 
         if (
-            book.titre.toLowerCase() === manga.value.toLowerCase() ||
-            book.genre.toLowerCase() === genre.value.toLowerCase()
+            book[1].toLowerCase() === manga.value.toLowerCase() ||
+            book[2].toLowerCase() === genre.value.toLowerCase()
         ) {
             afficher.style.display = "block";
             message.textContent = "Nous avons un résultat concernant votre recherche 😊";
 
-            affichermanga.textContent = book.titre;
-            affichergenre.textContent = book.genre;
-            afficherimage.src = book.image;
+            affichermanga.textContent = book[1];
+            affichergenre.textContent = book[2];
+            afficherimage.src = book[3];
 
             find = true;
         }
