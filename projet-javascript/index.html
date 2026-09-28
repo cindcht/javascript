@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Projet</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Choix de manga</h1>
+
+    <section id="formulaire">
+
+      <form onsubmit="afficherCarte(event)">
+
+        <fieldset>
+
+          <legend></legend>
+          <ul>
+            <li> <label for="manga">Titre</label>
+              <input type="text" placeholder="par titre?" name="manga" id="manga">
+            </li>
+
+            <li> <label for="genre">Genre</label>
+              <input type="text" placeholder="Par genre" name="genre" id="genre">
+            </li>
+
+          </ul>
+        </fieldset>
+
+        <section id="form-button">
+
+          <button type="submit">Rechercher</button>
+
+          <a href="index.html" id="btn-cancel">Annuler</a>
+
+        </section>
+
+      </form>
+
+    </section>
+
+    <section id="afficher">
+
+      <h1>Afficher</h1>
+      <p id="message"></p>
+      <p id="affichermanga"></p>
+      <p id="affichergenre"></p>
+      <img id="afficherimage" src="" alt="">
+
+    </section>
+
+  </main>
+
+  <footer></footer>
+
+</body>
+
+</html>
