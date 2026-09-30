@@ -1,23 +1,29 @@
 // Tableau des mangas
+
 const tableau = [
-    [0, "Naruto", "shonen", "images/naruto.jpg"],
-    [1, "One Piece", "shonen", "images/onepiece.jpg"],
-    [2, "ReZero", "Isekai", "images/rezero.webp"]
+    ["Naruto", "shonen"],
+    ["One Piece", "shonen"],
+    ["ReZero", "Isekai"],
 ];
 
 // Champs du formulaire
+
 const manga = document.querySelector('#manga');
 const genre = document.querySelector('#genre');
 
 // Zones où afficher les résultats
+
 const affichermanga = document.querySelector('#affichermanga');
 const affichergenre = document.querySelector('#affichergenre');
 const afficherimage = document.querySelector('#afficherimage');
 const afficher = document.querySelector('#afficher');
 const messageRecherche = document.querySelector('#message');
+const out = document.querySelector("#afficher");
+
 
 // Fonction appelée lorsque l'on clique sur "Rechercher"
-function afficherCarte(event) {
+
+const afficherCarte = (event) => {
     event.preventDefault();
 
     afficher.style.display = "none";
@@ -31,17 +37,31 @@ function afficherCarte(event) {
             book[2].toLowerCase() === genre.value.toLowerCase()
         ) {
             afficher.style.display = "block";
-            message.textContent = "Nous avons un résultat concernant votre recherche 😊";
-
-            affichermanga.textContent = book[1];
-            affichergenre.textContent = book[2];
-            afficherimage.src = book[3];
-
+            out.innerHTML = `<p id="message">Nous avons un résultat concernant votre recherche 😊</p>
+                             <p id="affichermanga">${book[1]}</p>
+                             <p id="affichergenre">${book[2]}</p>`
             find = true;
         }
+
     }
 
     if (find === false) {
         alert("Manga introuvable 🤐");
     }
+}
+
+// afficher les petits tableaux du grand tableau
+
+const tab1 = tableau.slice(0, 2);
+const tab2 = tableau.slice(2, 4);
+const tab3 = tableau.slice(4, 6);
+
+
+const afficherTout = () => {
+    afficher.style.display = "block";
+    out.innerHTML =
+        ` voici tous nos mangas : <p>  ${tab1} </p>
+        ${tab2} 
+        ${tab3}  `
+
 }
