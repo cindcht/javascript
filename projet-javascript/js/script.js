@@ -50,18 +50,8 @@ const afficherCarte = (event) => {
     }
 }
 
-// afficher les petits tableaux du grand tableau
-
-const tab1 = tableau.slice(0, 2);
-const tab2 = tableau.slice(2, 4);
-const tab3 = tableau.slice(4, 6);
 
 
-const afficherTout = () => {
-    afficher.style.display = "block";
-    out.innerHTML =
-        ` voici tous nos mangas : <p>  ${tab1} </p>
-        ${tab2} 
-        ${tab3}  `
 
-}
+
+
