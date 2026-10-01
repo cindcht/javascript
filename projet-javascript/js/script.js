@@ -1,9 +1,9 @@
 // Tableau des mangas
 
 const tableau = [
-    ["Naruto", "shonen"],
-    ["One Piece", "shonen"],
-    ["ReZero", "Isekai"],
+    { id: 0, titre: "Naruto", genre: "shonen" },
+    { id: 1, titre: "One Piece", genre: "shonen" },
+    { id: 2, titre: "ReZero", genre: "Isekai" }
 ];
 
 // Champs du formulaire
@@ -33,13 +33,13 @@ const afficherCarte = (event) => {
     for (const book of tableau) {
 
         if (
-            book[1].toLowerCase() === manga.value.toLowerCase() ||
-            book[2].toLowerCase() === genre.value.toLowerCase()
+            book.titre.toLowerCase() === manga.value.toLowerCase() ||
+            book.genre.toLowerCase() === genre.value.toLowerCase()
         ) {
             afficher.style.display = "block";
             out.innerHTML = `<p id="message">Nous avons un résultat concernant votre recherche 😊</p>
-                             <p id="affichermanga">${book[1]}</p>
-                             <p id="affichergenre">${book[2]}</p>`
+                             <p id="affichermanga">${book.titre}</p>
+                             <p id="affichergenre">${book.genre}</p>`
             find = true;
         }
 
@@ -50,7 +50,25 @@ const afficherCarte = (event) => {
     }
 }
 
+//afficher tous les mangas
 
+//champs où afficher tous les mangas
+
+const out2 = document.querySelector("#afficherTout");
+
+// fonction quand on clique sur le bouton "tout"
+
+const afficherTout = () => {
+
+
+    afficher.style.display = "none";
+    out2.style.display = "block";
+    for (const book of tableau) {
+        out2.innerHTML += `<p id="affichermanga">${book.titre}</p>
+                          <p id="affichergenre">${book.genre}</p>`
+    }
+
+}
 
 
 

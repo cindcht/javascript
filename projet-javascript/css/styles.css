@@ -79,12 +79,7 @@ fieldset {
     font-size: x-large;
 }
 
-#afficherimage {
-    height: 300px;
-    width: 350px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
+
 
 #affichermanga,
 #affichergenre {
@@ -93,4 +88,14 @@ fieldset {
 
 #message {
     color: violet
+}
+
+
+#afficherTout {
+    display: none;
+    background-color: aliceblue;
+    border: 2px solid blueviolet;
+    border-radius: 70px;
+    width: fit-content;
+    padding: 30px;
 }
