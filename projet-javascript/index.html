@@ -44,19 +44,70 @@
 
           <a href="index.html" id="btn-cancel">Annuler</a>
 
+
         </section>
       </form>
 
+
+
     </section>
+
+
 
     <section id="afficher">
 
     </section>
     <button type="click" onclick="afficherTout(event)" id="btn-tout">Tout</button>
-    <a href="index.html" id="btn-cancel">Annuler</a>
+    <a href="index.html" id="btn-cancel">Retour</a>
     <section id="afficherTout">
 
     </section>
+
+
+    <section>
+      <h2>Ajouter un manga</h2>
+
+      <form id="formAjout">
+
+        <label for="nouveauTitre">Titre :</label>
+        <input type="text" id="nouveauTitre" required>
+
+        <br><br>
+
+        <label for="nouveauGenre">Genre :</label>
+        <input type="text" id="nouveauGenre" required>
+
+        <br><br>
+
+        <label for="nouvelAuteur">Auteur :</label>
+        <input type="text" id="nouvelAuteur" required>
+
+        <br><br>
+
+        <label for="nouvelleAnnee">Année de publication :</label>
+        <input type="number" id="nouvelleAnnee" required>
+
+        <br><br>
+
+        <label for="nouveauPrix">Prix (€) :</label>
+        <input type="number" id="nouveauPrix" min="0" step="0.01" required>
+
+        <br><br>
+
+        <button type="submit">Ajouter le manga</button>
+
+      </form>
+    </section>
+
+    <script src="js/script.js" defer></script>
+
+
+
+    <section id="statistiques">
+      <h2>Statistiques des mangas</h2>
+      <p>Prix moyen : <span id="prixMoyen">0.00 €</span></p>
+    </section>
+
 
 
   </main>

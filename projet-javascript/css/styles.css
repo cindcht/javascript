@@ -92,10 +92,21 @@ fieldset {
 
 
 #afficherTout {
+    color: blueviolet;
+    ;
     display: none;
     background-color: aliceblue;
     border: 2px solid blueviolet;
     border-radius: 70px;
     width: fit-content;
     padding: 30px;
+}
+
+#prixMoyen,
+#statistiques {
+    color: white;
+}
+
+h2 {
+    color: white;
 }
