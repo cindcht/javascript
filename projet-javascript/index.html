@@ -5,10 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="js/script.js" defer></script>
-  <link rel="stylesheet" href="css/styles.css">
 
-  <title>Projet</title>
+
+  <<script src="js/statistiques.js" defer>
+    </script>
+    <script src="js/recherche.js" defer></script>
+    <script src="js/ajout.js" defer></script>
+    <script src="js/manga.js" defer></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Projet</title>
 </head>
 
 <body>
@@ -57,7 +64,7 @@
     <section id="afficher">
 
     </section>
-    <button type="click" onclick="afficherTout(event)" id="btn-tout">Tout</button>
+    <button type="button" onclick="afficherTout()" id="btn-tout">Tout</button>
     <a href="index.html" id="btn-cancel">Retour</a>
     <section id="afficherTout">
 
@@ -67,7 +74,7 @@
     <section>
       <h2>Ajouter un manga</h2>
 
-      <form id="formAjout">
+      <form id="formAjout" onsubmit="ajouterManga(event)">
 
         <label for="nouveauTitre">Titre :</label>
         <input type="text" id="nouveauTitre" required>
@@ -98,9 +105,6 @@
 
       </form>
     </section>
-
-    <script src="js/script.js" defer></script>
-
 
 
     <section id="statistiques">

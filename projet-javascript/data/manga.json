@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "titre": "Naruto",
+        "genre": "shonen",
+        "auteur": "Masashi Kishimoto",
+        "annee": 1999,
+        "prix": 7.50,
+        "dateAjout": "2026-10-14T10:00:00.000Z"
+    },
+    {
+        "id": 2,
+        "titre": "One Piece",
+        "genre": "shonen",
+        "auteur": "Eiichiro Oda",
+        "annee": 1997,
+        "prix": 7.20,
+        "dateAjout": "2026-10-14T10:05:00.000Z"
+    },
+    {
+        "id": 3,
+        "titre": "ReZero",
+        "genre": "isekai",
+        "auteur": "Tappei Nagatsuki",
+        "annee": 2012,
+        "prix": 8.90,
+        "dateAjout": "2026-10-14T10:10:00.000Z"
+    }
+]

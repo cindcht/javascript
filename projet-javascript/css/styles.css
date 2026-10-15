@@ -1,9 +1,21 @@
+html,
 body {
-    background-image: url("/images/2354322.jpg");
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("/image/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
-    color: whitesmoke;
+    color: blueviolet;
     font-size: x-large;
     text-align: center;
     text-decoration: underline;
@@ -108,5 +120,5 @@ fieldset {
 }
 
 h2 {
-    color: white;
+    color: blueviolet;
 }
