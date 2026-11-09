@@ -25,3 +25,33 @@ formAjout.addEventListener("submit", (event) => {
     afficherTout();
     calculerPrixMoyen();
 });
+
+
+const formSupprimer = document.querySelector("#formSupprimer");
+
+formSupprimer.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const titre = document.querySelector("#titreSupprimer").value.trim().toLowerCase();
+
+    const mangaExiste = tableau.some(manga =>
+        manga.titre.toLowerCase() === titre
+    );
+
+    if (!mangaExiste) {
+        alert("Aucun manga trouvé avec ce titre !");
+        return;
+    }
+
+    tableau = tableau.filter(manga =>
+        manga.titre.toLowerCase() !== titre
+    );
+
+    sauvegarderMangas();
+    formSupprimer.reset();
+
+    alert("Le manga a été supprimé !");
+
+    afficherTout();
+    calculerPrixMoyen();
+});
